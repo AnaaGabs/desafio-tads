@@ -19,5 +19,5 @@ class RateLimiter:
     def getScore(self, cpf):
         self.wait()
         score = self.score_service.getScore(cpf)
-        self.update_after_response()
+        self.updateWait()
         return score
